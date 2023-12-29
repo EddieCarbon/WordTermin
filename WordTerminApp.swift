@@ -11,7 +11,12 @@ import SwiftUI
 struct WordTerminApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                NavigationStack {
+                    HomeView()
+                        .navigationBarHidden(true)
+                }
+            }
         }
     }
 }

@@ -8,17 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		7079967F2B3E0BF4007CF1F7 /* WordTerminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079967E2B3E0BF4007CF1F7 /* WordTerminApp.swift */; };
-		707996812B3E0BF4007CF1F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996802B3E0BF4007CF1F7 /* ContentView.swift */; };
 		707996832B3E0BF5007CF1F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707996822B3E0BF5007CF1F7 /* Assets.xcassets */; };
 		707996862B3E0BF5007CF1F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707996852B3E0BF5007CF1F7 /* Preview Assets.xcassets */; };
+		707996922B3E127D007CF1F7 /* ExamsSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996912B3E127D007CF1F7 /* ExamsSchedule.swift */; };
+		707996982B3EF8CB007CF1F7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996972B3EF8CB007CF1F7 /* HomeView.swift */; };
+		7079969B2B3EFB38007CF1F7 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079969A2B3EFB38007CF1F7 /* CircleButtonView.swift */; };
+		7079969D2B3EFB6D007CF1F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079969C2B3EFB6D007CF1F7 /* Color.swift */; };
+		7079969F2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079969E2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift */; };
+		707996A12B3F11BD007CF1F7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A02B3F11BC007CF1F7 /* HomeViewModel.swift */; };
+		707996A52B3F1304007CF1F7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A42B3F1304007CF1F7 /* SettingsView.swift */; };
+		707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A62B3F13B3007CF1F7 /* XMarkButton.swift */; };
+		707996AC2B3F173E007CF1F7 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AB2B3F173E007CF1F7 /* ReservationView.swift */; };
+		707996AE2B3F1C41007CF1F7 /* SheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */; };
+		707996B02B3F4557007CF1F7 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */; };
+		707996B22B3F4587007CF1F7 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996B12B3F4587007CF1F7 /* ExpandedView.swift */; };
+		707996B42B3F4872007CF1F7 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996B32B3F4872007CF1F7 /* ExpandableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7079967B2B3E0BF4007CF1F7 /* WordTermin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordTermin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7079967E2B3E0BF4007CF1F7 /* WordTerminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTerminApp.swift; sourceTree = "<group>"; };
-		707996802B3E0BF4007CF1F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		707996822B3E0BF5007CF1F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		707996852B3E0BF5007CF1F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		707996912B3E127D007CF1F7 /* ExamsSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsSchedule.swift; sourceTree = "<group>"; };
+		707996972B3EF8CB007CF1F7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7079969A2B3EFB38007CF1F7 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		7079969C2B3EFB6D007CF1F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7079969E2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
+		707996A02B3F11BC007CF1F7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		707996A42B3F1304007CF1F7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		707996A62B3F13B3007CF1F7 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
+		707996AB2B3F173E007CF1F7 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeader.swift; sourceTree = "<group>"; };
+		707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		707996B12B3F4587007CF1F7 /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
+		707996B32B3F4872007CF1F7 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +59,7 @@
 		707996722B3E0BF4007CF1F7 = {
 			isa = PBXGroup;
 			children = (
+				7079967E2B3E0BF4007CF1F7 /* WordTerminApp.swift */,
 				7079967D2B3E0BF4007CF1F7 /* WordTermin */,
 				7079967C2B3E0BF4007CF1F7 /* Products */,
 			);
@@ -51,10 +76,13 @@
 		7079967D2B3E0BF4007CF1F7 /* WordTermin */ = {
 			isa = PBXGroup;
 			children = (
-				7079967E2B3E0BF4007CF1F7 /* WordTerminApp.swift */,
-				707996802B3E0BF4007CF1F7 /* ContentView.swift */,
-				707996822B3E0BF5007CF1F7 /* Assets.xcassets */,
+				7079968C2B3E0C7A007CF1F7 /* Core */,
+				7079968F2B3E0CA8007CF1F7 /* Extensions */,
+				7079968E2B3E0C8C007CF1F7 /* Models */,
+				7079968D2B3E0C83007CF1F7 /* Services */,
+				707996902B3E0CB1007CF1F7 /* Utilities */,
 				707996842B3E0BF5007CF1F7 /* Preview Content */,
+				707996822B3E0BF5007CF1F7 /* Assets.xcassets */,
 			);
 			path = WordTermin;
 			sourceTree = "<group>";
@@ -65,6 +93,142 @@
 				707996852B3E0BF5007CF1F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7079968C2B3E0C7A007CF1F7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				707996932B3EF7B3007CF1F7 /* Components */,
+				707996942B3EF7BB007CF1F7 /* Home */,
+				707996A82B3F170E007CF1F7 /* Reservation */,
+				707996A22B3F12DE007CF1F7 /* Settings */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7079968D2B3E0C83007CF1F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7079968E2B3E0C8C007CF1F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				707996912B3E127D007CF1F7 /* ExamsSchedule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7079968F2B3E0CA8007CF1F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7079969C2B3EFB6D007CF1F7 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		707996902B3E0CB1007CF1F7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		707996932B3EF7B3007CF1F7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				707996992B3EFB28007CF1F7 /* CircleButton */,
+				707996B52B3F48A7007CF1F7 /* Expandable */,
+				707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */,
+				707996A62B3F13B3007CF1F7 /* XMarkButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		707996942B3EF7BB007CF1F7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				707996962B3EF7EF007CF1F7 /* Views */,
+				707996952B3EF7E9007CF1F7 /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		707996952B3EF7E9007CF1F7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				707996A02B3F11BC007CF1F7 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		707996962B3EF7EF007CF1F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				707996972B3EF8CB007CF1F7 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		707996992B3EFB28007CF1F7 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				7079969A2B3EFB38007CF1F7 /* CircleButtonView.swift */,
+				7079969E2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift */,
+			);
+			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		707996A22B3F12DE007CF1F7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				707996A32B3F12F5007CF1F7 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		707996A32B3F12F5007CF1F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				707996A42B3F1304007CF1F7 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		707996A82B3F170E007CF1F7 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				707996AA2B3F172E007CF1F7 /* ViewModels */,
+				707996A92B3F1729007CF1F7 /* Views */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		707996A92B3F1729007CF1F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				707996AB2B3F173E007CF1F7 /* ReservationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		707996AA2B3F172E007CF1F7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		707996B52B3F48A7007CF1F7 /* Expandable */ = {
+			isa = PBXGroup;
+			children = (
+				707996B32B3F4872007CF1F7 /* ExpandableView.swift */,
+				707996B12B3F4587007CF1F7 /* ExpandedView.swift */,
+				707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */,
+			);
+			path = Expandable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +301,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707996812B3E0BF4007CF1F7 /* ContentView.swift in Sources */,
+				707996982B3EF8CB007CF1F7 /* HomeView.swift in Sources */,
+				707996A52B3F1304007CF1F7 /* SettingsView.swift in Sources */,
+				707996922B3E127D007CF1F7 /* ExamsSchedule.swift in Sources */,
+				707996A12B3F11BD007CF1F7 /* HomeViewModel.swift in Sources */,
+				7079969B2B3EFB38007CF1F7 /* CircleButtonView.swift in Sources */,
+				707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */,
+				707996B42B3F4872007CF1F7 /* ExpandableView.swift in Sources */,
+				7079969D2B3EFB6D007CF1F7 /* Color.swift in Sources */,
+				707996AC2B3F173E007CF1F7 /* ReservationView.swift in Sources */,
+				707996AE2B3F1C41007CF1F7 /* SheetHeader.swift in Sources */,
+				707996B02B3F4557007CF1F7 /* ThumbnailView.swift in Sources */,
 				7079967F2B3E0BF4007CF1F7 /* WordTerminApp.swift in Sources */,
+				707996B22B3F4587007CF1F7 /* ExpandedView.swift in Sources */,
+				7079969F2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
