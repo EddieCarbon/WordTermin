@@ -19,10 +19,6 @@
 		707996A52B3F1304007CF1F7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A42B3F1304007CF1F7 /* SettingsView.swift */; };
 		707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A62B3F13B3007CF1F7 /* XMarkButton.swift */; };
 		707996AC2B3F173E007CF1F7 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AB2B3F173E007CF1F7 /* ReservationView.swift */; };
-		707996AE2B3F1C41007CF1F7 /* SheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */; };
-		707996B02B3F4557007CF1F7 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */; };
-		707996B22B3F4587007CF1F7 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996B12B3F4587007CF1F7 /* ExpandedView.swift */; };
-		707996B42B3F4872007CF1F7 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996B32B3F4872007CF1F7 /* ExpandableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +35,6 @@
 		707996A42B3F1304007CF1F7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		707996A62B3F13B3007CF1F7 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		707996AB2B3F173E007CF1F7 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
-		707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeader.swift; sourceTree = "<group>"; };
-		707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
-		707996B12B3F4587007CF1F7 /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
-		707996B32B3F4872007CF1F7 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				707996992B3EFB28007CF1F7 /* CircleButton */,
-				707996B52B3F48A7007CF1F7 /* Expandable */,
-				707996AD2B3F1C41007CF1F7 /* SheetHeader.swift */,
 				707996A62B3F13B3007CF1F7 /* XMarkButton.swift */,
 			);
 			path = Components;
@@ -221,16 +211,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		707996B52B3F48A7007CF1F7 /* Expandable */ = {
-			isa = PBXGroup;
-			children = (
-				707996B32B3F4872007CF1F7 /* ExpandableView.swift */,
-				707996B12B3F4587007CF1F7 /* ExpandedView.swift */,
-				707996AF2B3F4557007CF1F7 /* ThumbnailView.swift */,
-			);
-			path = Expandable;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,13 +287,9 @@
 				707996A12B3F11BD007CF1F7 /* HomeViewModel.swift in Sources */,
 				7079969B2B3EFB38007CF1F7 /* CircleButtonView.swift in Sources */,
 				707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */,
-				707996B42B3F4872007CF1F7 /* ExpandableView.swift in Sources */,
 				7079969D2B3EFB6D007CF1F7 /* Color.swift in Sources */,
 				707996AC2B3F173E007CF1F7 /* ReservationView.swift in Sources */,
-				707996AE2B3F1C41007CF1F7 /* SheetHeader.swift in Sources */,
-				707996B02B3F4557007CF1F7 /* ThumbnailView.swift in Sources */,
 				7079967F2B3E0BF4007CF1F7 /* WordTerminApp.swift in Sources */,
-				707996B22B3F4587007CF1F7 /* ExpandedView.swift in Sources */,
 				7079969F2B3EFCD7007CF1F7 /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

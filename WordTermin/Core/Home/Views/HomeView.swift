@@ -19,7 +19,7 @@ struct HomeView: View {
             Color.theme.background
                 .ignoresSafeArea()
                 .sheet(isPresented: $showReservationView, content: {
-                    ReservationView()
+                    ReservationView(isPresented: $showReservationView)
                 })
             
             VStack {
@@ -37,7 +37,7 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showSettingsView, content: {
-                SettingsView()
+                SettingsView(isPresented: $showSettingsView)
             })
         }
     }

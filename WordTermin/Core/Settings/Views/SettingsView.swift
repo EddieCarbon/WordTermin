@@ -7,70 +7,127 @@
 
 import SwiftUI
 
+
 struct SettingsView: View {
     
-    @State private var flag: Bool = false
+    @Binding var isPresented: Bool
+    let title: String = "Informacje"
     
     var body: some View {
         NavigationView {
             VStack {
-                SheetHeader(title: "Informacje")
+                header
                 
-                ZStack {
-                    ScrollView {
-                        VStack {
-                            ExpandableView(thumbnail: ThumbnailView(content: {
-                                VStack(alignment: .leading, spacing: 10) {
-                                    Text("Jak obserwować terminy egzaminów?")
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .foregroundStyle(Color.theme.accent)
-                                        .font(.headline)
-                                        .fontWeight(.medium)
-                                                                
-                                }
-                                .padding()
-                            }), expanded: ExpandedView(content: {
+                ScrollView {
+                    DisclosureGroup(
+                        content: {
+                            Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
+                                .font(.body)
+                                .fontWeight(.light)
+                                .foregroundColor(Color.theme.accent)
                                 
-                                VStack {
-                                    Text("Jak obserwować terminy egzaminów?")
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .foregroundStyle(Color.theme.accent)
-                                        .font(.headline)
-                                        .fontWeight(.medium)
-                                    
-                                    
-                                    Text("Aby rozpocząć obserwowanie terminów w danym ośrodku egzaminacyjnym, na stronie 'Lista Egzaminów' użyj przycisku + w prawym dolnym rogu. Następnie wybierz wszystkie opcje dotyczące Twojego egzaminu.")
-                                        .font(.callout)
-                                        .foregroundStyle(Color.theme.accent)
-                                    
-                                    Spacer()
-                                }
-                                .padding()
-                                
-                            }))
-                            
+                        },
+                        label: {
+                            Text("Jak obserwować terminy egzaminów?")
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(Color.theme.accent)
                         }
-                        .padding()
-                        
-                        DisclosureGroup(
-                            isExpanded: $flag,
-                            content: {
-                                Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
-                                    .font(.body)
-                                    .fontWeight(.light)
-                            },
-                            label: {
-                                Text("1. Can I reuse the source code?")
-                                    .font(.body)
-                                    .bold()
-                                    .foregroundColor(.black)
+                    )
+                    .padding(.top)
+                    .padding()
+                    
+                    DisclosureGroup(
+                        content: {
+                            Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
+                                .font(.body)
+                                .fontWeight(.light)
+                                .foregroundColor(Color.theme.accent)
+                                
+                        },
+                        label: {
+                            Text("Dostałem powiadomienie. Co dalej?")
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(Color.theme.accent)
+                        }
+                    )
+                    .padding()
+                    
+                    DisclosureGroup(
+                        content: {
+                            Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
+                                .font(.body)
+                                .fontWeight(.light)
+                        },
+                        label: {
+                            Text("Termin zniknął, zanim zdążyłem się zapisać")
+                                .font(.body)
+                                .bold()
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color.theme.accent)
+                        }
+                    )
+                    .padding()
+                    
+                    DisclosureGroup(
+                        content: {
+                            Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
+                                .font(.body)
+                                .fontWeight(.light)
+                        },
+                        label: {
+                            Text("Powiadomienia nie przychodzą")
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(Color.theme.accent)
+                        }
+                    )
+                    .padding()
+                    
+                    DisclosureGroup(
+                        content: {
+                            Text("Absolutely! You are allowed to reuse the source code in your own projects (personal/commercial). However, you're not allowed to distribute or sell the source code without prior authorization.")
+                                .font(.body)
+                                .fontWeight(.light)
+                        },
+                        label: {
+                            Text("Wskazówki")
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(Color.theme.accent)
+                        }
+                    )
+                    .padding()
+                    
+                    DisclosureGroup(
+                        content: {
+                            VStack {
+                                Button(action: {
+                                    
+                                }, label: {
+                                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                                })
+                                
+                                Button(action: {
+                                    
+                                }, label: {
+                                    Image(systemName: "plus")
+                                })
                             }
-                        )
-                        .padding()
-         
-                    }
-                    .scrollIndicators(.hidden)
+                        },
+                        label: {
+                            Text("Kontakt")
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(Color.theme.accent)
+                        }
+                    )
+                    .padding()
                 }
+                
+                
+                
                 
                 Spacer()
             }
@@ -79,5 +136,27 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(isPresented: .constant(true))
+}
+
+extension SettingsView {
+    
+    private var header: some View {
+        HStack {
+            XMarkButton(isPresented: $isPresented)
+                .padding(.horizontal)
+            
+            Spacer()
+            Text(title)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+            Spacer()
+            
+            XMarkButton(isPresented: $isPresented)
+                .padding(.horizontal)
+                .opacity(0)
+        }
+        .padding(.vertical, 10)
+        .padding(.top, 10)
+    }
 }
