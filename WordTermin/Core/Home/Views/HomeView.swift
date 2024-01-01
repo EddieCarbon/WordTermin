@@ -15,30 +15,31 @@ struct HomeView: View {
     let reservationList: [String] = []
     
     var body: some View {
-        ZStack {
-            Color.theme.background
-                .ignoresSafeArea()
-                .sheet(isPresented: $showReservationView, content: {
-                    ReservationView(isPresented: $showReservationView)
-                })
-            
-            VStack {
-                header
+        NavigationStack {
+            ZStack {
+                Color.theme.background
+                    .ignoresSafeArea()
                 
-                // Empty list text
-                if reservationList.isEmpty {
-                    emptyListText
-                } else {
-                    ScrollView {
-                        ForEach(reservationList.indices) { item in
-                            Text("\(reservationList[item])")
+                VStack {
+                    header
+                    
+                    if reservationList.isEmpty {
+                        emptyListText
+                    } else {
+                        ScrollView {
+                            ForEach(reservationList.indices) { item in
+                                Text("\(reservationList[item])")
+                            }
                         }
                     }
                 }
+//                .navigationDestination(for: Int.self) { value in
+//                    ReservationView(value: value)
+//                }
+                .sheet(isPresented: $showSettingsView, content: {
+                    SettingsView(isPresented: $showSettingsView)
+                })
             }
-            .sheet(isPresented: $showSettingsView, content: {
-                SettingsView(isPresented: $showSettingsView)
-            })
         }
     }
 }
@@ -64,13 +65,16 @@ extension HomeView {
                 .font(.headline)
             
             Spacer()
-            
-            Button(action: {
-                showReservationView.toggle()
-            }, label: {
+
+            NavigationLink {
+                ReservationView()
+            } label: {
                 CircleButtonView(iconName: "plus")
-            })
-            
+            }
+
+//            NavigationLink(value: 2) {
+//                CircleButtonView(iconName: "plus")
+//            }            
         }
         .padding(.horizontal)
     }

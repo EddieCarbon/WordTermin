@@ -19,6 +19,7 @@
 		707996A52B3F1304007CF1F7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A42B3F1304007CF1F7 /* SettingsView.swift */; };
 		707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996A62B3F13B3007CF1F7 /* XMarkButton.swift */; };
 		707996AC2B3F173E007CF1F7 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996AB2B3F173E007CF1F7 /* ReservationView.swift */; };
+		707996B82B41BAC9007CF1F7 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707996B72B41BAC9007CF1F7 /* Reservation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		707996A42B3F1304007CF1F7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		707996A62B3F13B3007CF1F7 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		707996AB2B3F173E007CF1F7 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		707996B72B41BAC9007CF1F7 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 			children = (
 				707996932B3EF7B3007CF1F7 /* Components */,
 				707996942B3EF7BB007CF1F7 /* Home */,
-				707996A82B3F170E007CF1F7 /* Reservation */,
+				707996B92B434831007CF1F7 /* Reservation */,
 				707996A22B3F12DE007CF1F7 /* Settings */,
 			);
 			path = Core;
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				707996912B3E127D007CF1F7 /* ExamsSchedule.swift */,
+				707996B72B41BAC9007CF1F7 /* Reservation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,8 +143,8 @@
 		707996942B3EF7BB007CF1F7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				707996962B3EF7EF007CF1F7 /* Views */,
 				707996952B3EF7E9007CF1F7 /* ViewModels */,
+				707996962B3EF7EF007CF1F7 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -187,16 +190,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		707996A82B3F170E007CF1F7 /* Reservation */ = {
+		707996B92B434831007CF1F7 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
-				707996AA2B3F172E007CF1F7 /* ViewModels */,
-				707996A92B3F1729007CF1F7 /* Views */,
+				707996BB2B434849007CF1F7 /* ViewModels */,
+				707996BA2B434844007CF1F7 /* Views */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
 		};
-		707996A92B3F1729007CF1F7 /* Views */ = {
+		707996BA2B434844007CF1F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				707996AB2B3F173E007CF1F7 /* ReservationView.swift */,
@@ -204,7 +207,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		707996AA2B3F172E007CF1F7 /* ViewModels */ = {
+		707996BB2B434849007CF1F7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -284,6 +287,7 @@
 				707996982B3EF8CB007CF1F7 /* HomeView.swift in Sources */,
 				707996A52B3F1304007CF1F7 /* SettingsView.swift in Sources */,
 				707996922B3E127D007CF1F7 /* ExamsSchedule.swift in Sources */,
+				707996B82B41BAC9007CF1F7 /* Reservation.swift in Sources */,
 				707996A12B3F11BD007CF1F7 /* HomeViewModel.swift in Sources */,
 				7079969B2B3EFB38007CF1F7 /* CircleButtonView.swift in Sources */,
 				707996A72B3F13B3007CF1F7 /* XMarkButton.swift in Sources */,
