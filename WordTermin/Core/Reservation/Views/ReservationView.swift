@@ -9,18 +9,38 @@ import SwiftUI
 
 struct ReservationView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @StateObject var vm: ReservationViewModel
+    @State private var isExpanded = false
+    @Environment(\.colorScheme) var scheme
+
     
     var body: some View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
             
-            ScrollView {
-                
-                VStack {
+            if isExpanded {
+                ZStack {
+                    Color.black.opacity(0.4)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            self.hideKeyboard()
+                            withAnimation(.snappy) {
+                                isExpanded = false
+                            }
+                        }
                     
+                    searchList
                 }
+                .zIndex(2.0)
+            }
+            
+            VStack {
+                headquaterPicker
+                examTypeForm
+                dateForm
+                Spacer()
+ 
             }
             .navigationTitle("Dodaj Rezerwacje")
             .navigationBarTitleDisplayMode(.inline)
@@ -29,27 +49,156 @@ struct ReservationView: View {
 }
 
 #Preview {
-    ReservationView()
+    ReservationView(vm: ReservationViewModel())
 }
 
 extension ReservationView {
     
-//    private var header: some View {
-//        HStack {
-//            XMarkButton(isPresented: $isPresented)
-//                .padding(.horizontal)
-//            
-//            Spacer()
-//            Text(title)
-//                .font(.headline)
-//                .multilineTextAlignment(.center)
-//            Spacer()
-//            
-//            XMarkButton(isPresented: $isPresented)
-//                .padding(.horizontal)
-//                .opacity(0)
-//        }
-//        .padding(.vertical, 10)
-//        .padding(.top, 10)
-//    }
+    private var headquaterPicker: some View {
+        VStack(alignment: .leading) {
+            Text("Ośrodek egzaminacyjny")
+                .font(.callout)
+                .foregroundStyle(Color.theme.secondaryText)
+            
+            VStack {
+                HStack{
+                    Text(vm.headquaterSelection ?? "Wybierz")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.down")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
+                }
+                .frame(height: 40)
+                .padding(.horizontal)
+                
+            }
+            .background(Color.theme.background)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .onTapGesture {
+                withAnimation(.snappy) {
+                    isExpanded.toggle()
+                }
+            }
+            .shadow(color: .primary.opacity(0.2), radius: 4)
+        }
+        .padding(.top)
+        .padding(.horizontal)
+    }
+    
+    private var searchList: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Wybierz " + "ośrodek egzaminacyjny")
+                    .font(.title)
+                    .fontWeight(.medium)
+            }
+            .padding()
+            
+            VStack {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .font(.callout)
+                        .foregroundStyle(Color.theme.accent)
+                    
+                    TextField("", text: $vm.headquaterSearchText, prompt: Text(""))
+                }
+                
+                Divider()
+            }
+            .padding(.horizontal,5)
+            .padding(.horizontal, 15)
+            
+            ScrollView(showsIndicators: false) {
+                ForEach(vm.options, id: \.self) { option in
+                    HStack {
+                        Text(option)
+                            .foregroundStyle(vm.headquaterSelection == option ? 
+                                             Color.theme.accent : Color.theme.secondaryText)
+                        
+                        Spacer()
+                        
+                        if vm.headquaterSelection == option {
+                            Image(systemName: "checkmark")
+                                .font(.subheadline)
+                        }
+                    }
+                    .padding()
+                    .frame(width: .infinity, height: 40)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            self.hideKeyboard()
+                            vm.headquaterSelection = option
+                            isExpanded.toggle()
+                        }
+                    }
+                }
+            }
+        }
+        .frame(maxWidth:.infinity, maxHeight: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color.theme.background)
+        )
+        .padding(.vertical, 50)
+        .padding(.horizontal, 40)
+        .zIndex(2.0)
+    }
+    
+    private var examTypeForm: some View {
+        VStack(alignment: .leading) {
+            Text("Rodzaj egzaminu")
+                .font(.callout)
+                .foregroundStyle(Color.theme.secondaryText)
+            
+            Picker("", selection: $vm.examType) {
+                ForEach(vm.examTypes, id: \.self) {
+                        Text($0)
+                }
+            }
+            .pickerStyle(.segmented)
+
+        }
+        .padding(.vertical, 25)
+        .padding(.horizontal, 20)
+    }
+    
+    private var dateForm: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Data od:")
+                    .font(.callout)
+                    .foregroundStyle(Color.theme.secondaryText)
+                
+                DatePicker(
+                    "",
+                    selection: $vm.dateFrom,
+                    in: Date()...,
+                    displayedComponents: .date
+                )
+                
+            }
+            .frame(width: 110)
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                Text("Do:")
+                    .font(.callout)
+                    .foregroundStyle(Color.theme.secondaryText)
+                
+                DatePicker(
+                    "",
+                    selection: $vm.dateTo,
+                    in: vm.dateFrom...,
+                    displayedComponents: .date
+                )
+            }
+            .frame(width: 120)
+        }
+        .padding(.horizontal, 25)
+    }
+    
 }

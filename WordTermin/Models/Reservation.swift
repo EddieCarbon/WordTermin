@@ -10,14 +10,14 @@ import Foundation
 struct Reservation: Identifiable, Hashable {
     
     let id = UUID().uuidString
-    let headquater: Int
-    let category: String
-    let examType: Double
+    let headquater: Double?
+    let category: String?
+    let examType: Double?
     let dateFrom: Date?
     let dateTo: Date?
     
     
-    init(headquarter: Int, category: String, examType: Double, dateFrom: Date, dateTo: Date) {
+    init(headquarter: Double, category: String, examType: Double, dateFrom: Date, dateTo: Date) {
         self.headquater = headquarter
         self.category = category
         self.examType = examType

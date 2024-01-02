@@ -12,7 +12,10 @@ struct HomeView: View {
     @State private var showSettingsView: Bool = false
     @State private var showReservationView: Bool = false
     
-    let reservationList: [String] = []
+    let reservationList: [Reservation] = [
+//        Reservation(headquarter: 1, category: "B", examType: "theoryExams", dateFrom: "", dateTo: <#T##Date#>),
+//        
+    ]
     
     var body: some View {
         NavigationStack {
@@ -28,14 +31,18 @@ struct HomeView: View {
                     } else {
                         ScrollView {
                             ForEach(reservationList.indices) { item in
-                                Text("\(reservationList[item])")
+                                NavigationLink {
+                                    ReservationView(vm: ReservationViewModel())
+                                } label: {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .frame(height: 170)
+                                        .foregroundStyle(Color.theme.accent)
+                                        .padding()
+                                }
                             }
                         }
                     }
                 }
-//                .navigationDestination(for: Int.self) { value in
-//                    ReservationView(value: value)
-//                }
                 .sheet(isPresented: $showSettingsView, content: {
                     SettingsView(isPresented: $showSettingsView)
                 })
@@ -67,14 +74,10 @@ extension HomeView {
             Spacer()
 
             NavigationLink {
-                ReservationView()
+                ReservationView(vm: ReservationViewModel())
             } label: {
                 CircleButtonView(iconName: "plus")
-            }
-
-//            NavigationLink(value: 2) {
-//                CircleButtonView(iconName: "plus")
-//            }            
+            }         
         }
         .padding(.horizontal)
     }
