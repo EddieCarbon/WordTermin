@@ -37,6 +37,7 @@ struct ReservationView: View {
             
             VStack {
                 headquaterPicker
+                headquaterPicker
                 examTypeForm
                 dateForm
                 Spacer()
@@ -69,7 +70,7 @@ extension ReservationView {
                     Image(systemName: "chevron.down")
                         .font(.subheadline)
                         .foregroundStyle(.gray)
-                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
+//                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
                 }
                 .frame(height: 40)
                 .padding(.horizontal)
@@ -91,42 +92,40 @@ extension ReservationView {
     private var searchList: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Wybierz " + "ośrodek egzaminacyjny")
+                Text("Wybierz ośrodek egzaminacyjny")
                     .font(.title)
                     .fontWeight(.medium)
             }
             .padding()
             
-            VStack {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .font(.callout)
-                        .foregroundStyle(Color.theme.accent)
-                    
-                    TextField("", text: $vm.headquaterSearchText, prompt: Text(""))
-                }
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .font(.callout)
+                    .foregroundStyle(Color.theme.accent)
                 
-                Divider()
+                TextField("", text: $vm.headquaterSearchText, prompt: Text(""))
+                    .disableAutocorrection(true)
+                    
             }
-            .padding(.horizontal,5)
-            .padding(.horizontal, 15)
+            .padding(.vertical, 2)
+            .padding(.horizontal)
+            
+            Divider()
+                .padding(.horizontal)
+
             
             ScrollView(showsIndicators: false) {
                 ForEach(vm.options, id: \.self) { option in
+                    
                     HStack {
                         Text(option)
                             .foregroundStyle(vm.headquaterSelection == option ? 
                                              Color.theme.accent : Color.theme.secondaryText)
+                            .padding()
                         
                         Spacer()
-                        
-                        if vm.headquaterSelection == option {
-                            Image(systemName: "checkmark")
-                                .font(.subheadline)
-                        }
                     }
-                    .padding()
-                    .frame(width: .infinity, height: 40)
+                    .contentShape(Rectangle())
                     .onTapGesture {
                         withAnimation(.snappy) {
                             self.hideKeyboard()
@@ -142,8 +141,8 @@ extension ReservationView {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(Color.theme.background)
         )
-        .padding(.vertical, 50)
-        .padding(.horizontal, 40)
+        .padding(.vertical, 40)
+        .padding(.horizontal, 30)
         .zIndex(2.0)
     }
     
